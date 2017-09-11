@@ -1,21 +1,10 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import { NavigationActions } from 'react-navigation'
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#d70000'
-  },
-  headerTitle: {
-    color: '#f5f5f5'
-  },
-})
 
 class SampleCScreen extends Component {
   static navigationOptions = {
     title: 'サンプルC',
-    headerStyle: styles.header,
-    headerTitleStyle: styles.headerTitle,
   }
 
   render() {
