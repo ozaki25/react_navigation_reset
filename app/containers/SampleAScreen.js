@@ -56,7 +56,6 @@ class SampleAScreen extends Component {
       NavigationActions.navigate({ routeName: 'SampleB' })
     )
   }
-
 }
 
 export default SampleAScreen

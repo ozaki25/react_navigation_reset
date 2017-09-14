@@ -29,6 +29,7 @@ class SampleBScreen extends Component {
   static navigationOptions = {
     title: 'サンプルB',
     headerStyle: styles.header,
+    headerRight: <View></View>,
   }
 
   render() {
@@ -56,7 +57,6 @@ class SampleBScreen extends Component {
       NavigationActions.navigate({ routeName: 'SampleC' })
     )
   }
-
 }
 
 export default SampleBScreen

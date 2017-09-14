@@ -1,7 +1,7 @@
 export const stepLabels = ['サンプルA', 'サンプルB', 'サンプルC']
 export const stepIndivatorStyles = {
   stepIndicatorSize: 35,
-  currentStepIndicatorSize:40,
+  currentStepIndicatorSize: 40,
   separatorStrokeWidth: 3,
   stepStrokeWidth: 3,
   currentStepStrokeWidth: 3,

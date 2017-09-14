@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: '#546E7A',
+    alignSelf: 'center',
+    textAlign: 'center',
   },
 })
 
@@ -23,7 +25,8 @@ const AppNavigator = StackNavigator({
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
     headerTintColor: '#546E7A',
-  }
+    headerBackTitle: null,
+  },
 })
 
 export default AppNavigator
