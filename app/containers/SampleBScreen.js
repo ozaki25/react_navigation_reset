@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
 import { NavigationActions } from 'react-navigation'
+import StepIndicator from 'react-native-step-indicator'
+import { stepLabels, stepIndivatorStyles } from '../utils/StepIndicatorConfig'
 
 class SampleBScreen extends Component {
   static navigationOptions = {
@@ -10,6 +12,12 @@ class SampleBScreen extends Component {
   render() {
     return (
       <View>
+        <StepIndicator
+          customStyles={stepIndivatorStyles}
+          currentPosition={1}
+          stepCount={3}
+          labels={stepLabels}
+        />
         <TouchableOpacity onPress={this._onPressButton.bind(this)}>
           <Text>サンプルCへ</Text>
         </TouchableOpacity>
