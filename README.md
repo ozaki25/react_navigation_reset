@@ -1,14 +1,13 @@
 # react_navigation_sample
 
 - react-navigationを使ったサンプル
-
-- iosとandroidで見た目が違う
+- react-native-step-indicatorと無理やり組み合わせてみた
 
 ## android
 
-![android](https://user-images.githubusercontent.com/10087419/29877165-d2580778-8dd9-11e7-89b2-a2b79c52c2c9.gif)
+![android](https://user-images.githubusercontent.com/10087419/30410865-7617fdae-9948-11e7-81b7-9524f93d626a.gif)
 
 ## ios
 
-![ios](https://user-images.githubusercontent.com/10087419/29877159-d066e8da-8dd9-11e7-9e2a-df2f4ec4666c.gif)
+![ios](https://user-images.githubusercontent.com/10087419/30410870-7ae6331e-9948-11e7-9e83-a47454b7390e.gif)
 
