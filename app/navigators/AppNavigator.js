@@ -7,10 +7,10 @@ import SampleCScreen from '../containers/SampleCScreen'
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#d70000',
+    backgroundColor: '#E3F2FD',
   },
   headerTitle: {
-    color: '#f5f5f5',
+    color: '#546E7A',
   },
 })
 
@@ -22,7 +22,7 @@ const AppNavigator = StackNavigator({
   navigationOptions: {
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
-    headerTintColor: '#f5f5f5',
+    headerTintColor: '#546E7A',
   }
 })
 
