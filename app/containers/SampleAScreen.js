@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 import StepIndicator from 'react-native-step-indicator'
-import { stepLabels, stepIndivatorStyles } from '../utils/StepIndicatorConfig'
+import { stepLabels, stepIndivatorStyles } from '../config/StepIndicatorConfig'
 
 const styles = StyleSheet.create({
   header: {
