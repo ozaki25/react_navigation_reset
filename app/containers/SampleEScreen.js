@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
-import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 import Breadcrumb from '../components/Breadcrumb'
 import Style from '../styles/Style'
 
-class SampleCScreen extends Component {
+class SampleEScreen extends Component {
   static navigationOptions = {
-    title: 'パンくずなしView',
-    headerStyle: Style.headerWithoutBreadcrumb,
+    title: 'サンプルE',
+    headerStyle: Style.header,
     headerRight: <View></View>,
   }
 
   render() {
     return (
       <View style={Style.container}>
-        <View style={Style.contentsWithoutBreadcrumb}>
+        <Breadcrumb currentPosition={4} />
+        <View style={Style.contents}>
           <TouchableOpacity onPress={this._onPressButton.bind(this)}>
-            <Text>サンプルDへ</Text>
+            <Text>サンプルAに戻る</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -25,9 +26,14 @@ class SampleCScreen extends Component {
 
   _onPressButton() {
     this.props.navigation.dispatch(
-      NavigationActions.navigate({ routeName: 'SampleD' })
+      NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'SampleA' }),
+        ],
+      }),
     )
   }
 }
 
-export default SampleCScreen
+export default SampleEScreen

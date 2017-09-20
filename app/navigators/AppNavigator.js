@@ -4,26 +4,20 @@ import { StackNavigator } from 'react-navigation'
 import SampleAScreen from '../containers/SampleAScreen'
 import SampleBScreen from '../containers/SampleBScreen'
 import SampleCScreen from '../containers/SampleCScreen'
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#E3F2FD',
-  },
-  headerTitle: {
-    color: '#546E7A',
-    alignSelf: 'center',
-    textAlign: 'center',
-  },
-})
+import SampleDScreen from '../containers/SampleDScreen'
+import SampleEScreen from '../containers/SampleEScreen'
+import Style from '../styles/Style'
 
 const AppNavigator = StackNavigator({
   SampleA: { screen: SampleAScreen },
   SampleB: { screen: SampleBScreen },
   SampleC: { screen: SampleCScreen },
+  SampleD: { screen: SampleDScreen },
+  SampleE: { screen: SampleEScreen },
 }, {
   navigationOptions: {
-    headerStyle: styles.header,
-    headerTitleStyle: styles.headerTitle,
+    headerStyle: Style.header,
+    headerTitleStyle: Style.headerTitle,
     headerTintColor: '#546E7A',
     headerBackTitle: null,
   },
