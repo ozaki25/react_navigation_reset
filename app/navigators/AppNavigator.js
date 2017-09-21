@@ -22,4 +22,5 @@ const AppNavigator = StackNavigator({
 })
 
 export const disabledBackScreens = ['SampleB', 'SampleD']
+export const landscapeOrientationScreens = ['SampleC', 'SampleE']
 export default AppNavigator
