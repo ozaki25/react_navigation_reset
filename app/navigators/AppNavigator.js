@@ -1,5 +1,3 @@
-import React from 'react'
-import { StyleSheet } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 import SampleAScreen from '../containers/SampleAScreen'
 import SampleBScreen from '../containers/SampleBScreen'
@@ -23,4 +21,5 @@ const AppNavigator = StackNavigator({
   },
 })
 
+export const disabledBackScreens = ['SampleB', 'SampleD']
 export default AppNavigator
