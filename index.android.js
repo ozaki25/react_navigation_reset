@@ -5,7 +5,7 @@ import { disabledAndroidBack, abledAndroidBack, onNavigationStateChange } from '
 
 class ReactNativeSample extends Component {
   render() {
-    return <AppNavigator onNavigationStateChange={onNavigationStateChange.bind(this)} />
+    return <AppNavigator onNavigationStateChange={onNavigationStateChange} />
   }
 }
 
