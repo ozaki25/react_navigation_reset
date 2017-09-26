@@ -5,7 +5,7 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
     elevation: 0,
     height: 56,
-    marginTop: Platform.OS === 'ios' ? 78 : 62,
+    marginTop: Platform.OS === 'ios' ? 66 : 50,
     paddingBottom: Platform.OS === 'ios' ? 20 : 0,
     borderBottomWidth: 3.5,
     borderBottomColor: '#d70000',
@@ -26,7 +26,7 @@ export default StyleSheet.create({
   contents: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: -60,
+    marginTop: -48,
     paddingTop: 15,
     paddingBottom: 20,
     paddingHorizontal: 10,
@@ -34,7 +34,7 @@ export default StyleSheet.create({
   contentsIncludeScrollView: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: -60,
+    marginTop: -48,
     paddingHorizontal: 10,
   },
   scrollViewContents: {

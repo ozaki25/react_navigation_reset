@@ -6,8 +6,8 @@ import { stepLabels, stepIndivatorStyles } from '../config/StepIndicatorConfig'
 const styles = StyleSheet.create({
   stepIndivatorContainer: {
     backgroundColor: '#eee',
-    paddingTop: 15,
-    top: Platform.OS === 'ios' ? -116 : -118,
+    paddingTop: 12,
+    top: Platform.OS === 'ios' ? -102 : -106,
   },
 })
 
