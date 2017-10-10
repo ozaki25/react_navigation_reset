@@ -28,11 +28,8 @@ AppNavigator.router.getStateForAction = (action, state) => {
 
   const newRoutes = [];
   newRoutes[state.index] = state.routes[state.index];
-  const newState = (action.routeName === 'SampleC') ? { index: state.index, routes: newRoutes } : state;
+  const newState = (action.routeName === 'SampleA') ? { index: state.index, routes: newRoutes } : state;
   return original(action, newState);
 }
 
-
-export const disabledBackScreens = ['SampleB', 'SampleD']
-export const landscapeOrientationScreens = ['SampleC', 'SampleE']
 export default AppNavigator
