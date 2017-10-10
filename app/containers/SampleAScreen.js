@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
-import { NavigationActions } from 'react-navigation'
+import { View } from 'react-native'
 import Breadcrumb from '../components/Breadcrumb'
+import CustomButton from '../components/CustomButton'
 import Style from '../styles/Style'
 
 class SampleAScreen extends Component {
   static navigationOptions = {
-    title: 'パンくずありView',
+    title: 'サンプルA',
     headerStyle: Style.header,
   }
 
@@ -15,18 +15,14 @@ class SampleAScreen extends Component {
       <View style={Style.container}>
         <Breadcrumb currentPosition={0} />
         <View style={Style.contents}>
-          <TouchableOpacity onPress={this._onPressButton.bind(this)}>
-            <Text>サンプルBへ</Text>
-          </TouchableOpacity>
+          <CustomButton text="サンプルBへ" onPress={this._onPressButton.bind(this)} />
         </View>
       </View>
     )
   }
 
   _onPressButton() {
-    this.props.navigation.dispatch(
-      NavigationActions.navigate({ routeName: 'SampleB' })
-    )
+    this.props.navigation.navigate('SampleB');
   }
 }
 

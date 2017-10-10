@@ -1,102 +1,29 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import { NavigationActions } from 'react-navigation'
+import { View } from 'react-native'
 import Breadcrumb from '../components/Breadcrumb'
+import CustomButton from '../components/CustomButton'
 import Style from '../styles/Style'
 
 class SampleDScreen extends Component {
   static navigationOptions = {
     title: 'サンプルD',
-    headerStyle: Style.headerWithoutBreadcrumb,
+    headerStyle: Style.header,
     headerRight: <View></View>,
   }
 
   render() {
     return (
       <View style={Style.container}>
-        <ScrollView contentContainerStyle={Style.scrollViewContentsWithoutBreadcrumb}>
-          <TouchableOpacity onPress={this._onPressButton.bind(this)}>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>サンプルEへ</Text>
-            <Text>最終行</Text>
-          </TouchableOpacity>
-        </ScrollView>
+        <Breadcrumb currentPosition={3} />
+        <View style={Style.contents}>
+          <CustomButton text="サンプルEへ" onPress={this._onPressButton.bind(this)} />
+        </View>
       </View>
     )
   }
 
   _onPressButton() {
-    this.props.navigation.dispatch(
-      NavigationActions.navigate({ routeName: 'SampleE' })
-    )
+    this.props.navigation.navigate('SampleE');
   }
 }
 
