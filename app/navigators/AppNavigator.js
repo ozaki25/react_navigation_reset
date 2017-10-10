@@ -26,10 +26,9 @@ AppNavigator.router.getStateForAction = (action, state) => {
   if (!state) return original(action, state);
   // return original(action, state);
 
-  const { routeName } = action;
   const newRoutes = [];
   newRoutes[state.index] = state.routes[state.index];
-  const newState = (routeName === 'SampleC') ? { index: state.index, routes: newRoutes } : state;
+  const newState = (action.routeName === 'SampleC') ? { index: state.index, routes: newRoutes } : state;
   return original(action, newState);
 }
 
