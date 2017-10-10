@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
-import { NavigationActions } from 'react-navigation'
+import { View } from 'react-native'
 import Breadcrumb from '../components/Breadcrumb'
+import CustomButton from '../components/CustomButton'
 import Style from '../styles/Style'
 
 class SampleBScreen extends Component {
   static navigationOptions = {
-    title: 'パンくずありScrollView',
+    title: 'サンプルB',
     headerStyle: Style.header,
     headerRight: <View></View>,
   }
@@ -15,59 +15,15 @@ class SampleBScreen extends Component {
     return (
       <View style={Style.container}>
         <Breadcrumb currentPosition={1} />
-        <View style={Style.contentsIncludeScrollView}>
-          <ScrollView contentContainerStyle={Style.scrollViewContents}>
-            <TouchableOpacity onPress={this._onPressButton.bind(this)}>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>サンプルCへ</Text>
-              <Text>最終行</Text>
-            </TouchableOpacity>
-          </ScrollView>
+        <View style={Style.contents}>
+          <CustomButton text="サンプルCへ" onPress={this._onPressButton.bind(this)} />
         </View>
       </View>
     )
   }
 
   _onPressButton() {
-    this.props.navigation.dispatch(
-      NavigationActions.navigate({ routeName: 'SampleC' })
-    )
+    this.props.navigation.navigate('SampleC');
   }
 }
 

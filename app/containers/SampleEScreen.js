@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
-import { NavigationActions } from 'react-navigation'
+import { View } from 'react-native'
 import Breadcrumb from '../components/Breadcrumb'
+import CustomButton from '../components/CustomButton'
 import Style from '../styles/Style'
 
 class SampleEScreen extends Component {
@@ -16,23 +16,14 @@ class SampleEScreen extends Component {
       <View style={Style.container}>
         <Breadcrumb currentPosition={4} />
         <View style={Style.contents}>
-          <TouchableOpacity onPress={this._onPressButton.bind(this)}>
-            <Text>サンプルAに戻る</Text>
-          </TouchableOpacity>
+          <CustomButton text="サンプルAに戻る" onPress={this._onPressButton.bind(this)} />
         </View>
       </View>
     )
   }
 
   _onPressButton() {
-    this.props.navigation.dispatch(
-      NavigationActions.reset({
-        index: 0,
-        actions: [
-          NavigationActions.navigate({ routeName: 'SampleA' }),
-        ],
-      }),
-    )
+    this.props.navigation.navigate('SampleA');
   }
 }
 
